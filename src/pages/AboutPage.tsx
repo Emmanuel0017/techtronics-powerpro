@@ -8,12 +8,6 @@ interface TeamMember {
   role: string;
 }
 
-interface Milestone {
-  year: string;
-  title: string;
-  description: string;
-}
-
 const AboutPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {

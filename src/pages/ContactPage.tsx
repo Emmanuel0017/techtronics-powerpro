@@ -11,13 +11,6 @@ interface FormData {
   message: string;
 }
 
-interface OfficeLocation {
-  city: string;
-  address: string;
-  phone: string;
-  email: string;
-  hours: string;
-}
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -79,29 +72,7 @@ const ContactPage: React.FC = () => {
     'Other'
   ];
 
-  const officeLocations: OfficeLocation[] = [
-    {
-      city: 'Blantyre (Head Office)',
-      address: 'Chirimba kameza Road, Blantyre',
-      phone: '+265 123 456 789',
-      email: 'blantyre@malawielectrical.mw',
-      hours: 'Mon-Fri: 7:30AM-5:00PM, Sat: 8:00AM-1:00PM'
-    },
-    {
-      city: 'Lilongwe Office',
-      address: 'Area 3, Lilongwe',
-      phone: '+265 987 654 321',
-      email: 'lilongwe@malawielectrical.mw',
-      hours: 'Mon-Fri: 7:30AM-5:00PM, Sat: 8:00AM-1:00PM'
-    },
-    {
-      city: 'Mzuzu Office',
-      address: 'Mzuzu Central, Mzuzu',
-      phone: '+265 456 789 012',
-      email: 'mzuzu@malawielectrical.mw',
-      hours: 'Mon-Fri: 7:30AM-5:00PM, Sat: 8:00AM-1:00PM'
-    }
-  ];
+
 
   return (
     <div className="contact-page">
