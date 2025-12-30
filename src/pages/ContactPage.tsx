@@ -114,69 +114,11 @@ const ContactPage: React.FC = () => {
           </div>
           <h1>Contact Us</h1>
           <p>
-            Get in touch with Malawi's trusted electrical solutions provider. 
-            We're here to answer your questions and provide expert advice for your electrical needs.
+            Contact Techtronics Power Pro Solutions to discuss your electrical and HVAC needs. Our certified team is here to offer reliable advice and professional support.
           </p>
         </div>
       </section>
 
-      <section className="contact-details">
-        <div className="container">
-          <div className="section-header">
-            <h2>Get in Touch</h2>
-            <p className="section-description">
-              We have multiple offices across Malawi to serve you better
-            </p>
-          </div>
-
-          <div className="offices-grid">
-            {officeLocations.map((office, index) => (
-              <div key={index} className="office-card">
-                <div className="office-header">
-                  <div className="office-icon">📍</div>
-                  <h3>{office.city}</h3>
-                </div>
-                <div className="office-info">
-                  <div className="info-item">
-                    <span className="info-label">Address:</span>
-                    <span className="info-value">{office.address}</span>
-                  </div>
-                  <div className="info-item">
-                    <span className="info-label">Phone:</span>
-                    <span className="info-value">{office.phone}</span>
-                  </div>
-                  <div className="info-item">
-                    <span className="info-label">Email:</span>
-                    <span className="info-value">{office.email}</span>
-                  </div>
-                  <div className="info-item">
-                    <span className="info-label">Hours:</span>
-                    <span className="info-value">{office.hours}</span>
-                  </div>
-                </div>
-                <div className="office-actions">
-                  <a href={`tel:${office.phone.replace(/\s+/g, '')}`} className="btn btn-secondary">
-                    Call Office
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="emergency-banner">
-            <div className="emergency-content">
-              <div className="emergency-icon">🚨</div>
-              <div>
-                <h3>24/7 Emergency Electrical Services</h3>
-                <p>For urgent electrical issues, call our emergency line any time, day or night</p>
-              </div>
-            </div>
-            <a href="tel:+265999888777" className="btn btn-primary emergency-btn">
-              Emergency: +265 999 888 777
-            </a>
-          </div>
-        </div>
-      </section>
 
       <section className="contact-form-section">
         <div className="container">
@@ -350,8 +292,7 @@ const ContactPage: React.FC = () => {
               <h3>How quickly can you respond to emergency calls?</h3>
               <p>
                 For emergency situations, we aim to respond within 2 hours in urban areas 
-                and 4 hours in rural areas. Our emergency line (+265 999 888 777) is 
-                available 24/7.
+                and 4 hours in rural areas. 
               </p>
             </div>
             
@@ -367,7 +308,7 @@ const ContactPage: React.FC = () => {
             <div className="faq-item">
               <h3>What payment methods do you accept?</h3>
               <p>
-                We accept bank transfers, mobile money (Airtel Money, TNM Mpamba), and cash. 
+                We accept bank transfers, mobile money (Airtel Money, TNM Mpamba). 
                 Payment terms vary based on project size and are discussed upfront.
               </p>
             </div>

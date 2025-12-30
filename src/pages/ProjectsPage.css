@@ -57,17 +57,38 @@
 }
 
 .project-image {
-  height: 200px;
+  /* min-height: 200px; */
   background: linear-gradient(45deg, var(--light-gray), var(--medium-gray));
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .image-placeholder {
-  font-size: 4rem;
-  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.image-placeholder img{
+  min-width: 24%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 5px;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--light-gray);
+}
+
+.image-placeholder img:hover {
+  transform: scale(1.05);
+  border: 1px solid var(--primary-orange);
 }
 
 .project-badges {
@@ -232,8 +253,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .image-placeholder img{
+    width: 100%;
   }
 }
 

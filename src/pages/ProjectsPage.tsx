@@ -12,40 +12,45 @@ interface Project {
   duration: string;
   client: string;
   scope: string[];
-  image: string;
+  images: string[];
 }
 
 const ProjectsPage: React.FC = () => {
   const [filter, setFilter] = useState<string>('all');
 
   const projects: Project[] = [
-    {
-      id: 1,
-      location: 'Blantyre',
-      title: 'Central Business District Office Complex',
-      description: 'Complete electrical system installation for a 15-story office building in Blantyre\'s central business district. The project involved comprehensive lighting, power distribution, and backup systems for a modern office environment.',
-      type: 'Commercial',
-      year: '2023',
-      duration: '6 Months',
-      client: 'CBD Developments Ltd',
-      scope: [
-        'Complete electrical wiring',
-        'LED lighting system',
-        'Backup generator integration',
-        'Fire alarm system',
-        'Building management system'
-      ],
-      image: '🏙️'
-    },
+    // {
+    //   id: 1,
+    //   location: 'Blantyre',
+    //   title: 'Central Business District Office Complex',
+    //   description: 'Complete electrical system installation for a 15-story office building in Blantyre\'s central business district. The project involved comprehensive lighting, power distribution, and backup systems for a modern office environment.',
+    //   type: 'Commercial',
+    //   year: '2023',
+    //   duration: '6 Months',
+    //   client: 'CBD Developments Ltd',
+    //   scope: [
+    //     'Complete electrical wiring',
+    //     'LED lighting system',
+    //     'Backup generator integration',
+    //     'Fire alarm system',
+    //     'Building management system'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/why-us.jpg',
+    //     './assets/info2.jpg',
+    //     './assets/info4.jpg'
+    //   ]
+    // },
     {
       id: 2,
-      location: 'Lilongwe',
+      location: 'Nkhotakota, Dwangwa',
       title: 'Residential Estate Development',
-      description: 'Electrical installations for 50 luxury homes in Lilongwe\'s newest residential estate. Each home features smart home automation, solar integration, and energy-efficient lighting.',
+      description: 'Electrical installations for 50 luxury homes in Nkhotakota\'s newest residential estate. Each home features smart home automation, solar integration, and energy-efficient lighting.',
       type: 'Residential',
-      year: '2023',
+      year: '2025',
       duration: '8 Months',
-      client: 'Greenfields Properties',
+      client: 'Illovo Estate Houses',
       scope: [
         'Smart home automation',
         'Solar power integration',
@@ -53,116 +58,151 @@ const ProjectsPage: React.FC = () => {
         'Security lighting',
         'Energy management systems'
       ],
-      image: '🏡'
+      images: [
+        './assets/services_1.jpg',
+        './assets/why-us.jpg',
+        './assets/info2.jpg',
+        './assets/info4.jpg'
+      ]
     },
-    {
-      id: 3,
-      location: 'Mzuzu',
-      title: 'Industrial Manufacturing Plant',
-      description: 'Heavy-duty electrical infrastructure for a new manufacturing facility in Mzuzu industrial area. The project included motor controls, production line power, and industrial lighting.',
-      type: 'Industrial',
-      year: '2022',
-      duration: '12 Months',
-      client: 'Mzuzu Manufacturing Co.',
-      scope: [
-        'Motor control centers',
-        'PLC systems',
-        'Industrial lighting',
-        'Power factor correction',
-        'High voltage distribution'
-      ],
-      image: '🏭'
-    },
-    {
-      id: 4,
-      location: 'Zomba',
-      title: 'University Campus Upgrade',
-      description: 'Modernization of electrical systems across Zomba University campus buildings, improving energy efficiency, safety, and reliability for educational facilities.',
-      type: 'Institutional',
-      year: '2022',
-      duration: '10 Months',
-      client: 'University of Zomba',
-      scope: [
-        'Campus-wide lighting upgrade',
-        'Power distribution upgrade',
-        'Lecture hall AV systems',
-        'Emergency lighting',
-        'Solar street lighting'
-      ],
-      image: '🎓'
-    },
-    {
-      id: 5,
-      location: 'Blantyre',
-      title: 'Shopping Mall Electrical Systems',
-      description: 'Full electrical fit-out for a major retail complex in Blantyre, including specialized lighting, emergency systems, and energy-efficient solutions.',
-      type: 'Commercial',
-      year: '2021',
-      duration: '9 Months',
-      client: 'Mall Group Limited',
-      scope: [
-        'Retail lighting design',
-        'Emergency power systems',
-        'HVAC electrical systems',
-        'Security systems',
-        'Energy monitoring'
-      ],
-      image: '🛍️'
-    },
-    {
-      id: 6,
-      location: 'Lilongwe',
-      title: 'Hospital Backup Power Solution',
-      description: 'Installation of robust backup power systems to ensure uninterrupted operation of critical medical equipment at Lilongwe Central Hospital.',
-      type: 'Healthcare',
-      year: '2021',
-      duration: '5 Months',
-      client: 'Ministry of Health',
-      scope: [
-        'Generator installation',
-        'UPS systems',
-        'Critical care power',
-        'Power monitoring',
-        'Maintenance program'
-      ],
-      image: '🏥'
-    },
-    {
-      id: 7,
-      location: 'Blantyre',
-      title: 'Solar Farm Installation',
-      description: 'Design and installation of a 500kW solar farm for industrial use, providing sustainable energy and reducing grid dependency.',
-      type: 'Solar',
-      year: '2023',
-      duration: '7 Months',
-      client: 'Sustainable Energy Ltd',
-      scope: [
-        'Solar panel installation',
-        'Inverter systems',
-        'Grid-tie systems',
-        'Battery storage',
-        'Monitoring systems'
-      ],
-      image: '☀️'
-    },
-    {
-      id: 8,
-      location: 'Kasungu',
-      title: 'Agricultural Processing Plant',
-      description: 'Electrical systems for a large-scale agricultural processing facility, including refrigeration, processing equipment, and packaging machinery.',
-      type: 'Industrial',
-      year: '2022',
-      duration: '11 Months',
-      client: 'Agro Processing Malawi',
-      scope: [
-        'Processing equipment power',
-        'Refrigeration systems',
-        'Motor controls',
-        'Lighting systems',
-        'Safety systems'
-      ],
-      image: '🌾'
-    }
+    // {
+    //   id: 3,
+    //   location: 'Mzuzu',
+    //   title: 'Industrial Manufacturing Plant',
+    //   description: 'Heavy-duty electrical infrastructure for a new manufacturing facility in Mzuzu industrial area. The project included motor controls, production line power, and industrial lighting.',
+    //   type: 'Industrial',
+    //   year: '2022',
+    //   duration: '12 Months',
+    //   client: 'Mzuzu Manufacturing Co.',
+    //   scope: [
+    //     'Motor control centers',
+    //     'PLC systems',
+    //     'Industrial lighting',
+    //     'Power factor correction',
+    //     'High voltage distribution'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg'
+    //   ]
+    // },
+    // {
+    //   id: 4,
+    //   location: 'Zomba',
+    //   title: 'University Campus Upgrade',
+    //   description: 'Modernization of electrical systems across Zomba University campus buildings, improving energy efficiency, safety, and reliability for educational facilities.',
+    //   type: 'Institutional',
+    //   year: '2022',
+    //   duration: '10 Months',
+    //   client: 'University of Zomba',
+    //   scope: [
+    //     'Campus-wide lighting upgrade',
+    //     'Power distribution upgrade',
+    //     'Lecture hall AV systems',
+    //     'Emergency lighting',
+    //     'Solar street lighting'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg'
+    //   ]
+    // },
+    // {
+    //   id: 5,
+    //   location: 'Blantyre',
+    //   title: 'Shopping Mall Electrical Systems',
+    //   description: 'Full electrical fit-out for a major retail complex in Blantyre, including specialized lighting, emergency systems, and energy-efficient solutions.',
+    //   type: 'Commercial',
+    //   year: '2021',
+    //   duration: '9 Months',
+    //   client: 'Mall Group Limited',
+    //   scope: [
+    //     'Retail lighting design',
+    //     'Emergency power systems',
+    //     'HVAC electrical systems',
+    //     'Security systems',
+    //     'Energy monitoring'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg'
+    //   ]
+    // },
+    // {
+    //   id: 6,
+    //   location: 'Lilongwe',
+    //   title: 'Hospital Backup Power Solution',
+    //   description: 'Installation of robust backup power systems to ensure uninterrupted operation of critical medical equipment at Lilongwe Central Hospital.',
+    //   type: 'Healthcare',
+    //   year: '2021',
+    //   duration: '5 Months',
+    //   client: 'Ministry of Health',
+    //   scope: [
+    //     'Generator installation',
+    //     'UPS systems',
+    //     'Critical care power',
+    //     'Power monitoring',
+    //     'Maintenance program'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg'
+    //   ]
+    // },
+    // {
+    //   id: 7,
+    //   location: 'Blantyre',
+    //   title: 'Solar Farm Installation',
+    //   description: 'Design and installation of a 500kW solar farm for industrial use, providing sustainable energy and reducing grid dependency.',
+    //   type: 'Solar',
+    //   year: '2023',
+    //   duration: '7 Months',
+    //   client: 'Sustainable Energy Ltd',
+    //   scope: [
+    //     'Solar panel installation',
+    //     'Inverter systems',
+    //     'Grid-tie systems',
+    //     'Battery storage',
+    //     'Monitoring systems'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg'
+    //   ]
+    // },
+    // {
+    //   id: 8,
+    //   location: 'Kasungu',
+    //   title: 'Agricultural Processing Plant',
+    //   description: 'Electrical systems for a large-scale agricultural processing facility, including refrigeration, processing equipment, and packaging machinery.',
+    //   type: 'Industrial',
+    //   year: '2022',
+    //   duration: '11 Months',
+    //   client: 'Agro Processing Malawi',
+    //   scope: [
+    //     'Processing equipment power',
+    //     'Refrigeration systems',
+    //     'Motor controls',
+    //     'Lighting systems',
+    //     'Safety systems'
+    //   ],
+    //   images: [
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg',
+    //     './assets/services_1.jpg'
+    //   ]
+    // }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -180,9 +220,9 @@ const ProjectsPage: React.FC = () => {
             <span className="separator">/</span>
             <span>Projects</span>
           </div>
-          <h1>Our Electrical Projects</h1>
+          <h1>Our Projects</h1>
           <p>
-            Showcasing our expertise through successful electrical projects across Malawi. 
+            Showcasing our expertise through successful projects across Malawi. 
             Each project reflects our commitment to quality, safety, and innovation.
           </p>
         </div>
@@ -214,7 +254,9 @@ const ProjectsPage: React.FC = () => {
               <div key={project.id} className="project-card">
                 <div className="project-image">
                   <div className="image-placeholder">
-                    {project.image}
+                    {project.images.map((img, index) => (
+                      <img key={index} src={img} alt={`project ${index+1}`}/>
+                    ))}
                   </div>
                   <div className="project-badges">
                     <span className="badge location">{project.location}</span>
@@ -262,7 +304,7 @@ const ProjectsPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="project-stats">
+      {/* <section className="project-stats">
         <div className="container">
           <div className="section-header">
             <h2>Projects by Numbers</h2>
@@ -273,24 +315,24 @@ const ProjectsPage: React.FC = () => {
 
           <div className="stats-grid">
             <div className="stat-card">
-              <div className="stat-number">500+</div>
+              <div className="stat-number">50+</div>
               <div className="stat-label">Projects Completed</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">15</div>
+              <div className="stat-number">2</div>
               <div className="stat-label">Years Experience</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">28</div>
-              <div className="stat-label">Cities Covered</div>
+              <div className="stat-number">27</div>
+              <div className="stat-label">Districts Covered</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">98%</div>
+              <div className="stat-number">100%</div>
               <div className="stat-label">Client Satisfaction</div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

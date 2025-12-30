@@ -6,8 +6,6 @@ interface TeamMember {
   id: number;
   name: string;
   role: string;
-  experience: string;
-  qualification: string;
 }
 
 interface Milestone {
@@ -20,66 +18,27 @@ const AboutPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      name: 'James Banda',
-      role: 'Chief Electrical Engineer',
-      experience: '20+ years',
-      qualification: 'MSc Electrical Engineering, Registered Malawi Engineer'
+      name: 'Davie Kamwaza',
+      role: 'Managing Director',
+
     },
     {
       id: 2,
-      name: 'Sarah Chikondi',
-      role: 'Project Manager',
-      experience: '12 years',
-      qualification: 'BSc Electrical Engineering, PMP Certified'
+      name: 'Yobe',
+      role: 'Finance & Operations Manager',
     },
     {
       id: 3,
-      name: 'Peter Mwale',
-      role: 'Solar Energy Specialist',
-      experience: '8 years',
-      qualification: 'Renewable Energy Diploma, NABCEP Certified'
+      name: 'Andrew Mbewe',
+      role: 'Projects Manager',
     },
     {
       id: 4,
-      name: 'Grace Kachala',
-      role: 'Safety Compliance Officer',
-      experience: '15 years',
-      qualification: 'Electrical Safety Inspector, MBS Certified'
+      name: 'Emmanuel Mbewe',
+      role: 'Marketing and Branding Officer'
     }
   ];
 
-  const milestones: Milestone[] = [
-    {
-      year: '2008',
-      title: 'Company Founded',
-      description: 'Started as a small electrical repair service in Blantyre'
-    },
-    {
-      year: '2012',
-      title: 'MBS Certification',
-      description: 'Received Malawi Bureau of Standards certification for electrical work'
-    },
-    {
-      year: '2015',
-      title: 'National Expansion',
-      description: 'Expanded operations to Lilongwe and Mzuzu'
-    },
-    {
-      year: '2018',
-      title: 'Solar Division Launch',
-      description: 'Started dedicated solar power and renewable energy division'
-    },
-    {
-      year: '2021',
-      title: 'Industrial Specialization',
-      description: 'Developed specialized industrial electrical solutions division'
-    },
-    {
-      year: '2023',
-      title: '500+ Projects',
-      description: 'Successfully completed over 500 projects across Malawi'
-    }
-  ];
 
   return (
     <div className="about-page">
@@ -92,8 +51,7 @@ const AboutPage: React.FC = () => {
           </div>
           <h1>About Malawi Electrical Solutions</h1>
           <p>
-            For over 15 years, we have been powering Malawi's growth through innovative, 
-            safe, and sustainable electrical solutions that enhance lives and drive business success.
+            We deliver safe, reliable, and compliant electrical solutions designed to support Malawi’s growing residential and commercial needs.
           </p>
         </div>
       </section>
@@ -104,40 +62,37 @@ const AboutPage: React.FC = () => {
             <div className="overview-text">
               <h2>Our Story</h2>
               <p>
-                Founded in 2008 with a vision to revolutionize electrical services in Malawi, 
-                we have grown from a small workshop in Blantyre to become one of Malawi's 
-                most trusted electrical solutions providers.
+                Founded with a clear focus on quality and safety, Techtronics Power Pro Solutions is an electrical and HVAC services provider based in Malawi.
               </p>
               <p>
-                Our journey began with a simple commitment: to provide safe, reliable, 
-                and professional electrical solutions tailored to Malawi's unique needs. 
-                Today, we serve clients across all regions of Malawi - from urban centers 
-                like Blantyre and Lilongwe to rural communities.
+                We deliver reliable electrical and HVAC solutions for residential, commercial, and light industrial clients, guided by local expertise and internationally recognized standards.
               </p>
               <p>
-                Our team of certified electricians brings local knowledge combined with 
-                international standards of excellence. We believe in building lasting 
-                relationships based on trust, quality, and commitment to excellence.
+                Our approach is built on careful planning, regulatory compliance, and workmanship that prioritizes safety and long-term performance. As a growing company, we are committed to building lasting relationships through professionalism, transparency, and consistent service delivery.
               </p>
             </div>
             <div className="overview-stats">
-              <div className="stat-item">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">Years of Excellence</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">500+</div>
-                <div className="stat-label">Projects Completed</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Certified Staff</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">28</div>
-                <div className="stat-label">Cities Served</div>
-              </div>
+            <div className="stat-item">
+              <div className="stat-number">100%</div>
+              <div className="stat-label">Regulatory Compliance Focus</div>
             </div>
+
+            <div className="stat-item">
+              <div className="stat-number">Certified</div>
+              <div className="stat-label">Technical Oversight</div>
+            </div>
+
+            <div className="stat-item">
+              <div className="stat-number">Safety-First</div>
+              <div className="stat-label">Work Standards</div>
+            </div>
+
+            <div className="stat-item">
+              <div className="stat-number">Local</div>
+              <div className="stat-label">Expertise & Support</div>
+            </div>
+          </div>
+
           </div>
         </div>
       </section>
@@ -156,8 +111,7 @@ const AboutPage: React.FC = () => {
               <div className="mission-icon">🎯</div>
               <h3>Our Mission</h3>
               <p>
-                To power Malawi's growth through innovative, safe, and sustainable 
-                electrical solutions that enhance lives and drive business success.
+                To deliver trusted electrical and air conditioning solutions that empower our clients to live and work in safe, comfortable environments—combining expert craftsmanship, integrity, and innovation in everything we do.
               </p>
             </div>
             
@@ -165,19 +119,22 @@ const AboutPage: React.FC = () => {
               <div className="vision-icon">🚀</div>
               <h3>Our Vision</h3>
               <p>
-                To be Malawi's leading electrical services provider, recognized for 
-                excellence, reliability, and commitment to community development.
+                To become most trusted name in home and industrial power solutions—where reliability, innovation, and integrity light the way
               </p>
             </div>
           </div>
 
           <div className="values-grid">
             <div className="value-card">
+              <h4>Quality and Craftmanship</h4>
+              <p>We prioritize quality and craftsmanship in every project, ensuring installations are safe, compliant, and built to last.</p>
+            </div>
+            <div className="value-card">
               <h4>Safety First</h4>
               <p>Uncompromising commitment to electrical safety standards and regulations.</p>
             </div>
             <div className="value-card">
-              <h4>Integrity</h4>
+              <h4>Integrity and Transparency</h4>
               <p>Honest, transparent, and ethical in all our dealings and communications.</p>
             </div>
             <div className="value-card">
@@ -185,16 +142,12 @@ const AboutPage: React.FC = () => {
               <p>Striving for perfection in every project we undertake, large or small.</p>
             </div>
             <div className="value-card">
-              <h4>Innovation</h4>
+              <h4>Innovation and Continous Improvement</h4>
               <p>Embracing new technologies and methods to deliver better solutions.</p>
             </div>
             <div className="value-card">
-              <h4>Community</h4>
-              <p>Committed to Malawi's growth and the well-being of our communities.</p>
-            </div>
-            <div className="value-card">
-              <h4>Reliability</h4>
-              <p>Consistently delivering on our promises with quality and timeliness.</p>
+              <h4>Customer Satisfaction</h4>
+              <p>Our goal is complete customer satisfaction through clear communication, reliable service, and solutions that meet each client’s needs</p>
             </div>
           </div>
         </div>
@@ -205,7 +158,7 @@ const AboutPage: React.FC = () => {
           <div className="section-header">
             <h2>Our Leadership Team</h2>
             <p className="section-description">
-              Meet the experienced professionals who lead our operations across Malawi
+              Meet our professionals who lead our operations 
             </p>
           </div>
 
@@ -221,38 +174,7 @@ const AboutPage: React.FC = () => {
                   <h3>{member.name}</h3>
                   <p className="team-role">{member.role}</p>
                   <div className="team-details">
-                    <div className="detail-item">
-                      <span className="detail-label">Experience</span>
-                      <span className="detail-value">{member.experience}</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">Qualification</span>
-                      <span className="detail-value">{member.qualification}</span>
-                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="milestones-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Journey</h2>
-            <p className="section-description">
-              Key milestones in our journey of growth and excellence
-            </p>
-          </div>
-
-          <div className="timeline">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="timeline-item">
-                <div className="timeline-year">{milestone.year}</div>
-                <div className="timeline-content">
-                  <h3>{milestone.title}</h3>
-                  <p>{milestone.description}</p>
                 </div>
               </div>
             ))}
@@ -269,7 +191,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="certifications-grid">
+          {/* <div className="certifications-grid">
             <div className="certification-card">
               <div className="cert-icon">✅</div>
               <h3>Malawi Bureau of Standards</h3>
@@ -290,7 +212,7 @@ const AboutPage: React.FC = () => {
               <h3>Renewable Energy Certified</h3>
               <p>Certified installers for solar and renewable energy systems</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
