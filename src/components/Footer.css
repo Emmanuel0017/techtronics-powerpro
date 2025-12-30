@@ -1,0 +1,209 @@
+.footer {
+  background-color: var(--primary-black);
+  color: var(--white);
+  padding: var(--spacing-xxl) 0 var(--spacing-lg);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section {
+  padding: 0 var(--spacing-md);
+}
+
+.logo-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-logo .logo-text {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer-logo .logo-highlight {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--primary-orange);
+}
+
+.footer-tagline {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-social-media p {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--white);
+}
+
+.footer-social-icon:hover {
+  background-color: var(--primary-orange);
+  transform: translateY(-2px);
+}
+
+.footer-section h4 {
+  color: var(--white);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-orange);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: all var(--transition-fast);
+  display: block;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--primary-orange);
+  padding-left: var(--spacing-xs);
+}
+
+.footer-services {
+  list-style: none;
+}
+
+.footer-services li {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.footer-services li::before {
+  content: '⚡';
+  position: absolute;
+  left: 0;
+  color: var(--primary-orange);
+  font-size: 0.75rem;
+}
+
+.footer-contact-info p {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.footer-certifications {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cert-badge {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: rgba(255, 102, 0, 0.1);
+  color: var(--primary-orange);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid rgba(255, 102, 0, 0.3);
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright p {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.copyright p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .footer-section {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-certifications {
+    flex-direction: column;
+    align-items: center;
+  }
+}
